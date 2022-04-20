@@ -1,8 +1,8 @@
 import { IWorldOptions, World } from '@cucumber/cucumber';
 import Manager from './manager';
 
-import * as MF from './udemy';
-export { MF }
+import * as tokped from './tokped';
+export { tokped }
 
 export class Core extends World {
 
@@ -30,7 +30,7 @@ export class Core extends World {
     return (this.data === undefined || !this.isContinuousScenario()) ? new Map() : this.data
   }
   reset ({ reload = true } = {}) {
-    
+
     this.clearApplicationStorage();
     if (reload) browser.reloadSession();
     this.data = this.getDataMap();
@@ -38,8 +38,8 @@ export class Core extends World {
   }
 
   getContext <T>(context?: unknown): T {
-    if (context !== MF.Context) {
-      if (this.#manager.getContext() instanceof MF.Context) {
+    if (context !== tokped.Context) {
+      if (this.#manager.getContext() instanceof tokped.Context) {
         this.clearApplicationStorage();
       }
     }

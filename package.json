@@ -9,7 +9,7 @@
         "prepare": "husky install",
         "report:allure": "scripts/report-allure.zsh",
         "test:e2e": "scripts/test-e2e.zsh",
-        "udemy:test": "CUSTOM_VIDEO=fixtures/media/custom_video.y4m SSO=0 HEADLESS=0 WAITTIME_TIMEOUT=90000 PHONES=+6287889507343 COUNTRY=MY MF='udemy.com' npm run test:e2e -- --spec features/purchase.feature"
+        "toped:test": "CUSTOM_VIDEO=fixtures/media/custom_video.y4m SSO=0 HEADLESS=0 WAITTIME_TIMEOUT=90000 PHONES=+6287889507343 URL='www.tokopedia.com' npm run test:e2e -- --spec features/purchase-item.feature"
     },
     "dependencies": {
         "@wdio/allure-reporter": "7.6.0",

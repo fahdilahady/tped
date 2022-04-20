@@ -1,13 +1,8 @@
 import allure from '@wdio/allure-reporter';
 
 export class Context {
-  id = process.env.PRODUCTID||'MF';
-  url =
-    'https://' +
-    (process.env.MF ||
-      'apply-' +
-        (process.env.INSTANCE || 'uat').toLowerCase() +
-        process.env[process.env.COUNTRY + '_DOMAIN']+'/mf');
+  id = process.env.PRODUCTID||'tokped';
+  url ='https://' +(process.env.URL);
 
   constructor() {
     allure.addArgument(this.id, this.url);

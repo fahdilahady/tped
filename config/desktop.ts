@@ -20,18 +20,6 @@ const tag_expression: { [id: string]: string } = {
   'ZU': ' and (@ZU or (not @ZI and not @ID and not @MY and not @SG and not @TH))',
 };
 
-if (process.env.VISUAL && !['0', 'false'].includes(process.env.VISUAL)) {
-  services.push(
-    [
-      'image-comparison', {
-        baselineFolder: path.join(process.cwd(), 'src', 'packages', 'helper', 'datasource', 'silkroad', 'visual-test', 'baseline'),
-        formatImageName: '{tag}-{browserName}',
-        screenshotPath: path.join(process.cwd(), 'src', 'packages', 'helper', 'datasource', 'silkroad', 'visual-test')
-      }
-    ]
-  )
-}
-
 if (process.env.INTERCEPTOR && !['0', 'false'].includes(process.env.INTERCEPTOR)) {
   services.push('intercept');
 }
