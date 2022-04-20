@@ -8,6 +8,7 @@ defineStep('User Login with credential {string} {string} {string}', function(thi
   const pass= (password) ?password : process.env.toped_password
   const googleSecret = (secret) ?secret : process.env.toped_secret
   browser.navigateTo(ctx.url+'/login');
-  const page = this.getUI<QA.tokped.loginPage>(QA.tokped.loginPage)
-  page.submitLogin(email, pass, googleSecret)
+
+  this.getUI<QA.tokped.loginPage>(QA.tokped.loginPage)
+    .submitLogin(email, pass, googleSecret)
 });

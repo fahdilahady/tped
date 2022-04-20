@@ -35,5 +35,6 @@ export class loginPage extends BaseUI{
     this.submitEmail(email); browser.pause(2000);
     this.submitPassword(password); browser.pause(2000);
     this.submittOtp(googleSecret); browser.pause(2000);
+    return this
   }
 }
