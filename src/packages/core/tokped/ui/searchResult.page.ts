@@ -16,8 +16,9 @@ export class searchResultPage extends BaseUI{
   }
 
   selectItemByIndex(index=4){
+    browser.pause(2500)
     this.click($(this.element.item(index)))
-    this.awaitInteractableUI()
+    // this.awaitInteractableUI()
     return this
   }
 }

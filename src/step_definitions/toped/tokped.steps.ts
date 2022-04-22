@@ -45,5 +45,7 @@ defineStep('select item by index {string}', function(this:QA.Core, index:string)
 });
 
 defineStep('Purchase selected item', function(this:QA.Core){
-
+  this.getContext<QA.tokped.Context>(QA.tokped.Context)
+  this.getUI<QA.tokped.itemDetailsPage>(QA.tokped.itemDetailsPage)
+    .buyItem()
 })
