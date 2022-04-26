@@ -9,7 +9,8 @@
         "prepare": "husky install",
         "report:allure": "scripts/report-allure.zsh",
         "test:e2e": "scripts/test-e2e.zsh",
-        "toped:test": "HEADLESS=0 WAITTIME_TIMEOUT=90000 PHONES=+6287889507343 URL='www.tokopedia.com' npm run test:e2e -- --spec features/purchase-item.feature"
+        "toped:test": "HEADLESS=0 WAITTIME_TIMEOUT=90000 PHONES=+6287889507343 URL='www.tokopedia.com' npm run test:e2e -- --spec features/purchase-item.feature",
+        "sauce:test": "HEADLESS=0 WAITTIME_TIMEOUT=90000 URL='www.saucedemo.com' npm run test:e2e -- --spec features/sauce/addtocart.feature"
     },
     "dependencies": {
         "@wdio/allure-reporter": "7.6.0",

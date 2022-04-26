@@ -2,7 +2,8 @@ import { IWorldOptions, World } from '@cucumber/cucumber';
 import Manager from './manager';
 
 import * as tokped from './tokped';
-export { tokped }
+import * as sauce from './sauce'
+export { tokped, sauce }
 
 export class Core extends World {
 

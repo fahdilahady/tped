@@ -9,5 +9,6 @@ export class itemDetailsPage extends BaseUI{
 
   buyItem(){
     this.click($(this.element.buyButton))
+    return this
   }
 }
